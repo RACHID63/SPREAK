@@ -8,7 +8,7 @@ function lire() {
     var message = new SpeechSynthesisUtterance (texte);
     // Sélectionner la voix
     message.voiceURI = 'native';
-    message.lang 'fr_FR';
+    message.lang ='fr-FR';
     // Lire le message
     syntheseVocale.speak (message);
     
