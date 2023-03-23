@@ -1,21 +1,23 @@
-function lire(texte) {
+function lire(texte, lang) {
     var syntheseVocale = window.speechSynthesis;
     var message = new SpeechSynthesisUtterance(texte);
     message.voiceURI = 'native';
-    message.lang = 'ar-AR';
+    message.lang = lang;
     syntheseVocale.speak(message);
 }
 
 function lireMot() {
     var selectedWord = window.getSelection().toString();
+    var lang = document.getElementById('language').value;
     if (selectedWord !== '') {
-        lire(selectedWord);
+        lire(selectedWord, lang);
     }
 }
 
 function lireTout() {
     var texte = document.getElementById('texte').value;
-    lire(texte);
+    var lang = document.getElementById('language').value;
+    lire(texte, lang);
 }
 
 function setupListeners() {

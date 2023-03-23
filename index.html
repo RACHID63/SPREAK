@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+<div clas>
+    <title>Lecture</title>
+</div>
     <style>
         .word {
             cursor: pointer;
@@ -16,7 +18,18 @@
 </head>
 
 <body>
-    <h1>IA Lecture</h1>
+   
+        <h1>Lecture</h1>
+        <div>
+            <label for="language">Langue :</label>
+            <select id="language">
+                <option value="en-GB">Anglais</option>
+                <option value="ar-AR">Arabe</option>
+                <option value="de-DE">Allemand</option>
+                <option value="fr-FR">Français</option>
+            </select>
+        </div>
+   
     <p>Entrez du texte ci-dessous :</p>
     <textarea id="texte" oninput="handleTextChange()"></textarea>
     <div id="text-container"></div>
@@ -24,6 +37,7 @@
         <button id="read-word">Lire mot</button>
         <button id="read-all">Lire tout</button>
     </div>
+    
     <script src="script.js"></script>
 </body>
 
