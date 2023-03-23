@@ -7,15 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <style>
+        .word {
+            cursor: pointer;
+            margin-right: 3px;
+        }
+    </style>
 </head>
 
 <body>
     <h1>IA Lecture</h1>
     <p>Entrez du texte ci-dessous :</p>
-    <textarea id="texte"></textarea>
-    <button onclick="lire()"> Lire</button>
+    <textarea id="texte" oninput="handleTextChange()"></textarea>
+    <div id="text-container"></div>
+    <div>
+        <button id="read-word">Lire mot</button>
+        <button id="read-all">Lire tout</button>
+    </div>
     <script src="script.js"></script>
-
 </body>
 
 </html>
